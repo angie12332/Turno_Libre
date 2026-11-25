@@ -22,7 +22,9 @@ header {
 h1, h2, h3,h4{
     color: aliceblue;
 }
-
+li {
+    color: aliceblue;
+}
 p {
     color: #62748e;
 }
@@ -35,4 +37,5 @@ main {
     grid-area: principal;
     background-color: #0d1b2a;
     position: relative;
+    padding: 40px;
 }

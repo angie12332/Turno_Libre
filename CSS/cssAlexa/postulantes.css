@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 300px 1fr; 
+    grid-template-rows: 100px 1fr;  
+    grid-template-areas:
+    "cabecera cabecera"
+    "menu     principal";
+    min-height: 100vh;
+}
+
+header {
+    grid-area: cabecera;
+    background-color: #070e16;
+    
+}
+h1, h2, h3,h4{
+    color: aliceblue;
+}
+li {
+    color: aliceblue;
+}
+p {
+    color: #62748e;
+}
+aside {
+    grid-area: menu;
+    background-color: #1b3a4b;
+    position: relative;
+}
+main {
+    grid-area: principal;
+    background-color: #0d1b2a;
+    position: relative;
+    padding: 40px;
+}
