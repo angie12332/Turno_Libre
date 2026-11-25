@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis Vacantes</title>
     <link rel="stylesheet" href="../../CSS/cssAlexa/misVacantes.css">
+
 </head>
 <body>
     <header>
@@ -32,7 +33,10 @@
                 <p class="textoMain">Gestiona las ofertas de trabajo publicadas</p>
             </article>
             <article>
-                <button class="boton_crearVacantes"><a href="paginas/paginas de alexa/Crear_Vacante.html">Crear Vacante</a></button>
+                <button  class="boton_crearVacantes">
+                    <a class="text" href="paginas/paginas de alexa/Crear_Vacante.html">Crear Vacantes
+                    </a>
+                </button>
             </article>
         </section>
         <section class="estadisticas">
@@ -54,8 +58,22 @@
                 <p class="stat-texto">Plazas cubiertas</p>
             </article>
         </section>
-        <section>
+        <section class="pestanas">
+            <div class="glass-radio-group">
+                <input type="radio" name="plan" id="glass-todas" checked />
+                <label for="glass-todas">Todas</label>
 
+                <input type="radio" name="plan" id="glass-activas" />
+                <label for="glass-activas">Activas</label>
+
+                <input type="radio" name="plan" id="glass-cerradas" />
+                <label for="glass-cerradas">Cerradas</label>
+
+                <input type="radio" name="plan" id="glass-borradores" />
+                <label for="glass-borradores">Borradores</label>
+
+                <div class="glass-glider"></div>
+            </div>
         </section>
         <section class="tablaDeVacantes">
             <table>
