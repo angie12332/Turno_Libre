@@ -23,10 +23,61 @@
             <h1>Turno Libre</h1>
             <p>Portal del empleador</p>
         </section>
-
     </aside>
     <main>
-        
+        <section>
+            <article>
+                <h2>Crear NuevaVacante</h2>
+                <p>Publica una oferta de trabajo</p>
+            </article>
+            <article>
+                <button>
+                    cancelar
+                </button>
+            </article>
+        </section>
+        <section>
+            <section class="crear">
+                <input type="radio" name="paso" id="paso1" checked>
+                <input type="radio" name="paso" id="paso2">
+                <input type="radio" name="paso" id="paso3">
+                <input type="radio" name="paso" id="paso4">
+
+                <nav class="pasos">
+                    <label for="paso1"><span class="numero">1</span> Información básica</label>
+                    <label for="paso2"><span class="numero">2</span> Requisitos</label>
+                    <label for="paso3"><span class="numero">3</span> Condiciones</label>
+                    <label for="paso4"><span class="numero">4</span> Vista previa</label>
+                </nav>
+        </section>
+        <section>
+            <h3>Información básica</h3>
+            <form action="">
+                <label for="cargo">titulo del cargo</label>
+                <input type="text" name="cargo" id="cargo">
+                    <br><br>
+                <label for="contrato">Tipo de contrato</label>
+                <select id="contrato" name="contrato" required>
+                <option value="medioTiempo">Medio-tiempo</option>
+                <option value="tiempoCompleto">Tiempo completo</option>
+                <option value="eventual">Eventual</option>
+                <option value="turnos">Turnos</option>
+                </select>
+
+                <label for="modalidad">Modalidad</label>
+                <select id="modalidad" name="modalidad" >
+                    <option value="presencial">Presencial</option>
+                    <option value="remoto">Remoto</option>
+                    <option value="hibrido">Híbrido</option>
+                </select>
+                <br><br>
+                <label for="plaza">cantidad de plazas</label>
+                <input type="number" name="plaza" id="plaza">
+
+                <label for="fechaCierre">Fecha de cierre</label>
+                <input type="date" name="fechaCierre" id="fechaCierre">
+            </form>
+        </section>
     </main>
     <footer>
 
