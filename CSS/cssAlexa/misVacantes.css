@@ -38,10 +38,77 @@ main {
     background-color: #0d1b2a;
     position: relative;
 }
+.encabezadoMain {
+    font-size: 36px;
+    margin-bottom: 6px;
+}
+.textoMain{
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.parteDelTitulo{
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;   
+}
 .boton_crearVacantes{
     background-color: #4ecdc4;
     text-decoration-color: aliceblue;
-    align-content: flex-end;
-    position: absolute;
-    left: 1100px;
+    
+}
+.estadisticas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 20px; 
+    margin-bottom: 30px;
+
+}
+
+.stat {
+    background: #162432;
+    border: 1px solid #23505d;
+    border-radius: 16px;
+    padding: 24px;
+    color: white;
+}
+
+.stat-icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #1a4a4f;        
+    margin-bottom: 20px;
+}
+
+.stat-numero {
+    display: block;
+    font-size: 32px;
+}
+
+.stat-texto {
+    color: #9bb3a6;     
+    margin-top: 4px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;  
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;            
+}
+
+th {
+    text-align: left;
+    padding: 16px;
+    color: #62748e;
+    font-size: 14px;
+}
+
+td {
+    padding: 16px;
+    border-top: 1px solid #e5e7eb;
 }
