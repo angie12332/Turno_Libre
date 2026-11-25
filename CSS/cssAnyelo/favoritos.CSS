@@ -1,0 +1,203 @@
+/* CONFIGURACIÓN GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(
+        160deg,
+        #080b19 0%,
+        #101d43 40%,
+        #173b7a 75%,
+        #24539b 100%
+    ) !important;
+    color: white;
+}
+
+/* CONTENEDOR */
+.pagina {
+    width: 100%;
+    padding: 25px 30px;
+}
+
+/* TÍTULO */
+.encabezado {
+    margin-bottom: 30px;
+}
+
+.encabezado h2 {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.encabezado p {
+    color: #9bbcff;
+    font-size: 15px;
+    margin: 0;
+}
+
+/* DISTRIBUCIÓN DE TARJETAS */
+.tarjetas {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 14px;
+    margin: 0;
+}
+
+.tarjetas > div {
+    padding: 0;
+    flex: 1;
+    min-width: 0;
+}
+
+.tarjetas > div:first-child {
+    flex: 1.12;
+}
+
+/* TARJETAS */
+.vacante {
+    background: #f1f1f1 !important;
+    color: #17213b !important;
+    border: none !important;
+    border-radius: 13px !important;
+    min-height: 275px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+}
+
+.vacante .card-body {
+    padding: 22px;
+}
+
+/* ICONO DE EMPRESA */
+.parte-superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.empresa-icono {
+    width: 41px;
+    height: 41px;
+    background: #173c9b !important;
+    color: #ffffff !important;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* CORAZÓN */
+.corazon {
+    color: #df4b82 !important;
+    font-size: 17px;
+}
+
+/* INFORMACIÓN DE VACANTE */
+.vacante h5 {
+    color: #17213b !important;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.empresa {
+    color: #65718b !important;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.dato {
+    color: #7585a5 !important;
+    font-size: 13px;
+    margin-bottom: 3px;
+}
+
+.dato i {
+    margin-right: 5px;
+}
+
+/* TIPO Y FECHA */
+.informacion {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+    margin-bottom: 16px;
+}
+
+.tipo {
+    background: #dce8ff !important;
+    color: #2855a5 !important;
+    border-radius: 20px;
+    padding: 4px 11px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.guardado {
+    color: #45516b !important;
+    font-size: 12px;
+}
+
+/* BOTONES */
+.botones {
+    display: flex;
+    gap: 9px;
+    width: 100%;
+}
+
+.botones .btn {
+    flex: 1;
+    border: none !important;
+    border-radius: 7px !important;
+    padding: 9px 5px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff !important;
+    box-shadow: none !important;
+}
+
+/* BOTÓN AZUL OSCURO */
+.botones .btn-detalles {
+    background-color: #1946a8 !important;
+    color: #ffffff !important;
+}
+
+.botones .btn-detalles:hover {
+    background-color: #123681 !important;
+}
+
+/* BOTÓN AZUL TURQUESA */
+.botones .btn-postular {
+    background-color: #21a9d0 !important;
+    color: #ffffff !important;
+}
+
+.botones .btn-postular:hover {
+    background-color: #148eaf !important;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .tarjetas {
+        flex-direction: column;
+    }
+
+    .tarjetas > div {
+        width: 100%;
+        flex: none;
+    }
+
+    .pagina {
+        padding: 20px 15px;
+    }
+}
