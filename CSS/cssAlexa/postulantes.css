@@ -1,3 +1,4 @@
+/* ---------- BASE (tu base) ---------- */
 * {
     margin: 0;
     padding: 0;
@@ -5,37 +6,388 @@
 }
 
 body {
+    font-family: "Inter", system-ui, Arial, sans-serif;
     display: grid;
-    grid-template-columns: 300px 1fr; 
-    grid-template-rows: 100px 1fr;  
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 100px 1fr;
     grid-template-areas:
-    "cabecera cabecera"
-    "menu     principal";
+        "cabecera cabecera"
+        "menu     principal";
     min-height: 100vh;
 }
 
-header {
-    grid-area: cabecera;
-    background-color: #070e16;
-    
-}
-h1, h2, h3,h4{
+h1, h2, h3, h4 {
     color: aliceblue;
 }
+
 li {
     color: aliceblue;
 }
+
 p {
     color: #62748e;
 }
+
+/* ---------- HEADER ---------- */
+header {
+    grid-area: cabecera;
+    background-color: #070e16;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding: 0 24px;
+}
+
+header ul {
+    display: flex;
+    gap: 8px;
+    list-style: none;
+}
+
+header li {
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #9bb3a6;
+}
+
+header a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header li.activo {
+    background: #1e3a5f;
+    color: #60a5fa;
+}
+
+/* ---------- ASIDE ---------- */
+/* Borra tus reglas "aside" y "aside p" anteriores y pega esto en su lugar */
+
 aside {
     grid-area: menu;
     background-color: #1b3a4b;
     position: relative;
 }
+
+/* parte de arriba: título y línea divisoria */
+.lateral_arriba {
+    padding: 24px;
+    border-bottom: 1px solid #23505d;
+}
+
+.lateral_arriba h1 {
+    font-size: 22px;
+}
+
+.lateral_arriba p {
+    margin-top: 4px;
+    font-size: 14px;
+    color: #4ec3a6;
+}
+
+/* el menú */
+.menu {
+    padding: 24px 16px;
+}
+
+.menu h5 {
+    margin: 0 0 12px 8px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #7f9bb0;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    list-style: none;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 10px;
+    color: #b6c8d4;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.menu a:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+}
+
+/* la página en la que estás */
+.menu a.activo {
+    background: #23505d;
+    color: #4ecdc4;
+}
+
+/* ---------- MAIN ---------- */
 main {
     grid-area: principal;
     background-color: #0d1b2a;
     position: relative;
     padding: 40px;
+}
+
+/* ---------- TITULO + ORDENAR + ASIGNAR ---------- */
+.titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 32px;
+}
+
+.titulo h2 {
+    font-size: 36px;
+    margin-bottom: 6px;
+}
+
+.titulo p {
+    font-size: 18px;
+    color: #9bb3a6;
+}
+
+.acciones {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.ordenar {
+    padding: 14px 16px;
+    border: none;
+    border-radius: 10px;
+    background: white;
+    color: #1d2b24;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.boton-asignar {
+    padding: 14px 20px;
+    border-radius: 10px;
+    background: #4ecdc4;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* ---------- PESTAÑAS ---------- */
+.pestanas {
+    margin-bottom: 24px;
+}
+
+.glass-radio-group {
+    display: flex;
+    position: relative;
+    background: #192735;
+    border-radius: 12px;
+    padding: 6px;
+    width: fit-content;
+}
+
+.glass-radio-group input {
+    display: none;
+}
+
+.glass-radio-group label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 190px;                 /* todos del mismo ancho */
+    padding: 12px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #9bb3a6;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease-in-out;
+}
+
+.glass-radio-group label:hover {
+    color: white;
+}
+
+.glass-radio-group input:checked + label {
+    color: white;
+}
+
+.glass-glider {
+    position: absolute;
+    top: 6px;
+    bottom: 6px;
+    left: 6px;
+    width: 190px;                 /* igual al ancho de cada label */
+    border-radius: 10px;
+    background: #1e3a5f;
+    z-index: 1;
+    transition: transform 0.4s ease-in-out;
+}
+
+#glass-todos:checked ~ .glass-glider          { transform: translateX(0); }
+#glass-preseleccionados:checked ~ .glass-glider { transform: translateX(100%); }
+#glass-pendientes:checked ~ .glass-glider     { transform: translateX(200%); }
+#glass-rechazados:checked ~ .glass-glider     { transform: translateX(300%); }
+
+/* ---------- LISTA DE POSTULANTES ---------- */
+.lista {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.postulante {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.avatar {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1e3a5f, #4ecdc4);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* nombre, datos y habilidades: ocupa todo el espacio que sobra */
+.info {
+    flex: 1;
+}
+
+.info h3 {
+    font-size: 22px;
+    color: #1e293b;          /* oscuro, porque la tarjeta es blanca */
+    margin-bottom: 6px;
+}
+
+.estrellas {
+    margin-left: 8px;
+    color: #fbbf24;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.nota {
+    color: #94a3b8;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.datos {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.habilidades span {
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: #f1f5f9;
+    color: #334155;
+    font-size: 15px;
+}
+
+/* ---------- COMPATIBILIDAD ---------- */
+.compat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 140px;
+}
+
+.porcentaje {
+    font-size: 36px;
+}
+
+.compat-texto {
+    font-size: 16px;
+    color: #94a3b8;
+}
+
+.barra {
+    display: block;
+    width: 100%;
+    height: 6px;
+    margin-top: 6px;
+    background: #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.relleno {
+    display: block;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.porcentaje.alto  { color: #10b981; }
+.relleno.alto     { background: #10b981; }
+.porcentaje.medio { color: #f59e0b; }
+.relleno.medio    { background: #f59e0b; }
+
+/* ---------- ESTADO, VER PERFIL Y MENU ---------- */
+.estado {
+    padding: 6px 16px;
+    border: 1px solid;
+    border-radius: 20px;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.estado.pendiente {
+    background: #fffbeb;
+    color: #b45309;
+    border-color: #fde68a;
+}
+
+.estado.preseleccionado {
+    background: #eff6ff;
+    color: #1d4ed8;
+    border-color: #bfdbfe;
+}
+
+.ver-perfil {
+    padding: 14px 24px;
+    border-radius: 10px;
+    background: #1e3a5f;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.menu-puntos {
+    background: none;
+    border: none;
+    color: #94a3b8;
+    font-size: 24px;
+    cursor: pointer;
 }

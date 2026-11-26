@@ -14,22 +14,127 @@
 
         <ul>
             <li><a href="">Empleado</a></li>
-            <li>Empleador</li>
-            <li><a href="">administrador</a></li>
+            <li class="activo">Empleador</li>
+            <li><a href="">Administrador</a></li>
         </ul>
     </header>
+
     <aside>
-        <section>
+        <section class="lateral_arriba">
             <h1>Turno Libre</h1>
             <p>Portal del empleador</p>
         </section>
 
+        <nav class="menu">
+            <h5>Vacantes</h5>
+            <ul>
+                <li><a href="../paginas de alexa/mis_vacantes.html" >💼 Mis Vacantes</a></li>
+                <li><a href="../paginas de alexa/postulantes.html" class="activo">👥 Postulantes</a></li>
+            </ul>
+        </nav>
     </aside>
-    <main>
-        
-    </main>
-    <footer>
 
-    </footer>
+    <main>
+
+        <section class="titulo">
+            <article>
+                <h2>Postulantes · Barista</h2>
+                <p>14 candidatos para esta vacante</p>
+            </article>
+            <article class="acciones">
+                <select class="ordenar">
+                    <option>Ordenar por match</option>
+                    <option>Más recientes</option>
+                    <option>Mejor calificados</option>
+                </select>
+                <a class="boton-asignar" href="Asignar Trabajador"> Asignar trabajador</a>
+            </article>
+        </section>
+
+        <section class="pestanas">
+            <section class="glass-radio-group">
+                <input type="radio" name="filtro" id="glass-todos" checked />
+                <label for="glass-todos">Todos</label>
+
+                <input type="radio" name="filtro" id="glass-preseleccionados" />
+                <label for="glass-preseleccionados">Preseleccionados</label>
+
+                <input type="radio" name="filtro" id="glass-pendientes" />
+                <label for="glass-pendientes">Pendientes </label>
+
+                <input type="radio" name="filtro" id="glass-rechazados" />
+                <label for="glass-rechazados">Rechazados </label>
+
+                <span class="glass-glider"></span>
+            </section>
+        </section>
+
+        <section class="lista">
+
+            <article class="postulante">
+                <span class="avatar">ML</span>
+                <section class="info">
+                    <h3>María López <span class="estrellas">★★★★★</span> <span class="nota">4.8</span></h3>
+                    <p class="datos">📍 Providencia &nbsp; 🕒 3 años exp.</p>
+                    <p class="habilidades">
+                        <span>Café</span>
+                        <span>Barista</span>
+                        <span>Atención al cliente</span>
+                    </p>
+                </section>
+                <section class="compat">
+                    <strong class="porcentaje alto">95%</strong>
+                    <span class="compat-texto">compatibilidad</span>
+                    <span class="barra"><span class="relleno alto" style="width: 95%"></span></span>
+                </section>
+                <span class="estado pendiente">Pendiente</span>
+                <a class="ver-perfil" href="../paginas de alexa/Detalle_Candidato.html">Ver perfil</a>
+                <button class="menu-puntos">⋮</button>
+            </article>
+
+            <article class="postulante">
+                <span class="avatar">CR</span>
+                <section class="info">
+                    <h3>Carlos Rodríguez <span class="estrellas">★★★★★</span> <span class="nota">4.5</span></h3>
+                    <p class="datos">📍 Las Condes &nbsp; 🕒 2 años exp.</p>
+                    <p class="habilidades">
+                        <span>Café</span>
+                        <span>Caja</span>
+                        <span>Inglés</span>
+                    </p>
+                </section>
+                <section class="compat">
+                    <strong class="porcentaje medio">88%</strong>
+                    <span class="compat-texto">compatibilidad</span>
+                    <span class="barra"><span class="relleno medio" style="width: 88%"></span></span>
+                </section>
+                <span class="estado pendiente">Pendiente</span>
+                <a class="ver-perfil" href="../paginas de alexa/Detalle_Candidato.html">Ver perfil</a>
+                <button class="menu-puntos">⋮</button>
+            </article>
+
+            <article class="postulante">
+                <span class="avatar">AM</span>
+                <section class="info">
+                    <h3>Ana Martínez <span class="estrellas">★★★★★</span> <span class="nota">4.9</span></h3>
+                    <p class="datos">📍 Ñuñoa &nbsp; 🕒 4 años exp.</p>
+                    <p class="habilidades">
+                        <span>Barista</span>
+                        <span>Latte art</span>
+                        <span>V60</span>
+                    </p>
+                </section>
+                <section class="compat">
+                    <strong class="porcentaje alto">92%</strong>
+                    <span class="compat-texto">compatibilidad</span>
+                    <span class="barra"><span class="relleno alto" style="width: 92%"></span></span>
+                </section>
+                <span class="estado preseleccionado">Preseleccionado</span>
+                <a class="ver-perfil" href="../paginas de alexa/Detalle_Candidato.html">Ver perfil</a>
+                <button class="menu-puntos">⋮</button>
+            </article>
+
+        </section>
+    </main>
 </body>
 </html>

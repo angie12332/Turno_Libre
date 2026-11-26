@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <header class="encabezado">
+    <nav>
+      <a href="Panel-administrador.html">← Volver al panel</a>
+    </nav>
+    <h1>Toda la actividad</h1>
+    <p>Historial completo de la plataforma · jueves, 26 de noviembre de 2026</p>
+  </header>
+
+  <main>
+
+    <!-- RESUMEN -->
+    <section class="estadisticas" aria-label="Resumen de actividad">
+      <article class="tarjeta-estadistica">
+        <p class="valor">128</p>
+        <p class="etiqueta">Eventos hoy</p>
+      </article>
+      <article class="tarjeta-estadistica">
+        <p class="valor">42</p>
+        <p class="etiqueta">Vacantes publicadas</p>
+      </article>
+      <article class="tarjeta-estadistica">
+        <p class="valor">37</p>
+        <p class="etiqueta">Turnos confirmados</p>
+      </article>
+      <article class="tarjeta-estadistica">
+        <p class="valor">19</p>
+        <p class="etiqueta">Calificaciones</p>
+      </article>
+    </section>
+
+    <!-- FILTROS -->
+    <section class="panel panel-filtros">
+      <h2>Filtros</h2>
+
+      <form action="#" method="get">
+        <label for="buscar">Buscar</label>
+        <input type="search" id="buscar" name="buscar" placeholder="Nombre, empresa o turno...">
+
+        <label for="tipo">Tipo de actividad</label>
+        <select id="tipo" name="tipo">
+          <option value="">Todas</option>
+          <option value="vacante">Vacantes publicadas</option>
+          <option value="turno">Turnos</option>
+          <option value="calificacion">Calificaciones</option>
+          <option value="perfil">Perfiles</option>
+          <option value="asignacion">Asignaciones</option>
+        </select>
+
+        <label for="rol">Rol</label>
+        <select id="rol" name="rol">
+          <option value="">Todos</option>
+          <option value="empleado">Empleados</option>
+          <option value="empleador">Empleadores</option>
+          <option value="administrador">Administradores</option>
+        </select>
+
+        <label for="desde">Desde</label>
+        <input type="date" id="desde" name="desde">
+
+        <label for="hasta">Hasta</label>
+        <input type="date" id="hasta" name="hasta">
+
+        <button type="submit">Aplicar filtros</button>
+        <button type="reset">Limpiar</button>
+      </form>
+    </section>
+
+    <!-- LISTADO DE ACTIVIDAD -->
+    <section class="panel panel-actividad">
+      <header>
+        <h2>🕒 Actividad reciente</h2>
+        <p>Mostrando 1–12 de 128 eventos</p>
+      </header>
+
+      <table class="tabla-actividad">
+        <thead>
+          <tr>
+            <th scope="col">Usuario</th>
+            <th scope="col">Acción</th>
+            <th scope="col">Detalle</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="avatar">CD</span> <strong>Café del Centro</strong></td>
+            <td>Publicó una vacante</td>
+            <td>Barista · Part time</td>
+            <td><span class="badge">Vacante</span></td>
+            <td><time>Hace 5 min</time></td>
+            <td><a href="#">Ver</a></td>
+          </tr>
+          <tr>
+            <td><span class="avatar">AM</span> <strong>Ana Martínez</strong></td>
+            <td>Confirmó asistencia a turno</td>
+            <td>Turno #TRN-4821</td>
+            <td><span class="badge">Turno</span></td>
+            <td><time>Hace 12 min</time></td>
+            <td><a href="#">Ver</a></td>
+          </tr>
+          <tr>
+            <td><span class="avatar">HP</span> <strong>Hotel Palace</strong></td>
+            <td>Calificó a empleado</td>
+            <td>Juan García · ⭐ 5.0</td>
+            <td><span class="badge">Calificación</span></td>
+            <td><time>Hace 30 min</time></td>
+            <td><a href="#">Ver</a></td>
+          </tr>
+          <tr>
+            <td><span class="avatar">CR</span> <strong>Carlos Rodríguez</strong></td>
+            <td>Completó su perfil</td>
+            <td>Empleado verificado</td>
+            <td><span class="badge">Perfil</span></td>
+            <td><time>Hace 1 hora</time></td>
+            <td><a href="#">Ver</a></td>
+          </tr>
+          <tr>
+            <td><span class="avatar">S</span> <strong>SecuriMax</strong></td>
+            <td>Asignó trabajador</td>
+            <td>Turno guardia · 20 sep</td>
+            <td><span class="badge">Asignación</span></td>
+            <td><time>Hace 2 horas</time></td>
+            <td><a href="#">Ver</a></td>
+          </tr>
+          <tr>
+            <td><span class="avatar">LF</span> <strong>LogiFood SpA</strong></td>
+            <td>Subió documentos de verificación</td>
+            <td>Pendiente de revisión</td>
+            <td><span class="badge">Empresa</span></td>
+            <td><time>Hace 3 horas</time></td>
+            <td><a href="#">Ver</a></td>
+          </tr>
+          <tr>
+            <td><span class="avatar">LP</span> <strong>Laura Pérez</strong></td>
+            <td>Se postuló a una vacante</td>
+            <td>Auxiliar de bodega · Full time</td>
+            <td><span class="badge">Postulación</span></td>
+            <td><time>Hace 3 horas</time></td>
+            <td><a href="#">Ver</a></td>
+          </tr>
+          <tr>
+            <td><span class="avatar">RB</span> <strong>Restaurante Brasa</strong></td>
+            <td>Publicó una vacante</td>
+            <td>Mesero · Fines de semana</td>
+            <td><span class="badge">Vacante</span></td>
+            <td><time>Hace 4 horas</time></td>
+            <td><a href="#">Ver</a></td>
+          </tr>
+          <tr>
+            <td><span class="avatar">MT</span> <strong>Miguel Torres</strong></td>
+            <td>Canceló asistencia a turno</td>
+            <td>Turno #TRN-4790</td>
+            <td><span class="badge">Turno</span></td>
+            <td><time>Hace 5 horas</time></td>
+            <td><a href="#">Ver</a></td>
+          </tr>
+          <tr>
+            <td><span class="avatar">EV</span> <strong>EventosVip</strong></td>
+            <td>Calificó a empleado</td>
+            <td>Sofía Ramírez · ⭐ 4.5</td>
+            <td><span class="badge">Calificación</span></td>
+            <td><time>Hace 6 horas</time></td>
+            <td><a href="#">Ver</a></td>
+          </tr>
+          <tr>
+            <td><span class="avatar">AD</span> <strong>Admin</strong></td>
+            <td>Verificó una empresa</td>
+            <td>Ferretería Los Andes</td>
+            <td><span class="badge">Administración</span></td>
+            <td><time>Hace 7 horas</time></td>
+            <td><a href="#">Ver</a></td>
+          </tr>
+          <tr>
+            <td><span class="avatar">DG</span> <strong>Diana Gómez</strong></td>
+            <td>Actualizó su perfil</td>
+            <td>Nueva experiencia laboral agregada</td>
+            <td><span class="badge">Perfil</span></td>
+            <td><time>Ayer, 18:42</time></td>
+            <td><a href="#">Ver</a></td>
+          </tr>
+          <tr>
+            <td><span class="avatar">HC</span> <strong>Hotel Central</strong></td>
+            <td>Asignó trabajador</td>
+            <td>Turno recepción · 21 sep</td>
+            <td><span class="badge">Asignación</span></td>
+            <td><time>Ayer, 16:10</time></td>
+            <td><a href="#">Ver</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- PAGINACIÓN -->
+      <nav class="paginacion" aria-label="Paginación">
+        <a href="#">« Anterior</a>
+        <a href="#" aria-current="page">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <span>...</span>
+        <a href="#">11</a>
+        <a href="#">Siguiente »</a>
+      </nav>
+    </section>
+
+  </main>
+</body>
+</html>

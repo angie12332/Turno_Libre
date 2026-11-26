@@ -15,17 +15,26 @@
 
         <ul class="navegacion">
             <li><a href="">Empleado</a></li>
-            <li>Empleador</li>
+            <li class="activo">Empleador</li>
             <li><a href="">administrador</a></li>
         </ul>
     </header>
-    <aside>
-        <section class="lateral_arriba">
-            <h1>Turno Libre</h1>
-            <p>Portal del empleador</p>
-        </section>
 
-    </aside>
+        <aside>
+            <section class="lateral_arriba">
+                <h1>Turno Libre</h1>
+                <p>Portal del empleador</p>
+            </section>
+
+            <nav class="menu">
+                <h5>Vacantes</h5>
+                <ul>
+                    <li><a href="../paginas de alexa/mis_vacantes.html" class="activo">💼 Mis Vacantes</a></li>
+                    <li><a href="../paginas de alexa/postulantes.html">👥 Postulantes</a></li>
+                </ul>
+            </nav>
+        </aside>
+
     <main>
         <section class="parteDelTitulo">
             <article>
@@ -33,10 +42,11 @@
                 <p class="textoMain">Gestiona las ofertas de trabajo publicadas</p>
             </article>
             <article>
-                <button  class="boton_crearVacantes">
-                    <a class="text" href="paginas/paginas de alexa/Crear_Vacante.html">Crear Vacantes
+                <article>
+                    <a class="boton_crearVacantes" href="Crear_Vacante.html">
+                        <span class="text">Crear Vacante</span>
                     </a>
-                </button>
+                </article>
             </article>
         </section>
         <section class="estadisticas">
@@ -103,8 +113,5 @@
             </table>
         </section>
     </main>
-    <footer>
-
-    </footer>
 </body>
 </html>
