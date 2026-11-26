@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <header class="encabezado">
+    <h1>Panel Administrador</h1>
+    <p>Resumen de plataforma · jueves, 26 de noviembre de 2026</p>
+  </header>
+
+  <main>
+
+    <!-- TARJETAS DE ESTADÍSTICAS -->
+    <section class="estadisticas" aria-label="Estadísticas generales">
+      <article class="tarjeta-estadistica">
+        <span class="icono">👥</span>
+        <span class="variacion">↑ 12%</span>
+        <p class="valor">3.842</p>
+        <p class="etiqueta">Usuarios activos</p>
+      </article>
+
+      <article class="tarjeta-estadistica">
+        <span class="icono">💼</span>
+        <span class="variacion">↑ 8%</span>
+        <p class="valor">247</p>
+        <p class="etiqueta">Vacantes publicadas</p>
+      </article>
+
+      <article class="tarjeta-estadistica">
+        <span class="icono">📅</span>
+        <span class="variacion">↑ 18%</span>
+        <p class="valor">1.204</p>
+        <p class="etiqueta">Turnos completados</p>
+      </article>
+
+      <article class="tarjeta-estadistica">
+        <span class="icono">🏢</span>
+        <span class="variacion">↑ 5%</span>
+        <p class="valor">312</p>
+        <p class="etiqueta">Empleadores activos</p>
+      </article>
+    </section>
+
+    <!-- GRÁFICO Y DISTRIBUCIÓN -->
+    <section class="fila-graficos">
+
+      <!-- Turnos completados -->
+      <article class="panel panel-turnos">
+        <header>
+          <h2>Turnos completados</h2>
+          <p>Últimos 12 meses</p>
+          <span class="badge">↑ 18% vs año anterior</span>
+        </header>
+
+        <svg class="grafico-linea" viewBox="0 0 600 80" width="600" height="80" role="img" aria-label="Gráfico de turnos completados">
+          <polyline points="0,60 100,56 200,60 260,50 360,46 460,40 600,30" fill="none" stroke="teal" stroke-width="2" />
+        </svg>
+
+        <ul class="resumen-turnos">
+          <li>
+            <strong>1.204</strong>
+            <span>Total año</span>
+          </li>
+          <li>
+            <strong>100</strong>
+            <span>Promedio mes</span>
+          </li>
+          <li>
+            <strong>Ago 131</strong>
+            <span>Mejor mes</span>
+          </li>
+          <li>
+            <strong>18%</strong>
+            <span>Crecimiento</span>
+          </li>
+        </ul>
+      </article>
+
+      <!-- Distribución de usuarios -->
+      <article class="panel panel-usuarios">
+        <header>
+          <h2>Distribución de usuarios</h2>
+          <p>Por rol en la plataforma</p>
+        </header>
+
+        <div class="rol">
+          <p><span>Empleados</span> <strong>3.412</strong></p>
+          <progress value="89" max="100">89%</progress>
+          <small>89% del total</small>
+        </div>
+
+        <div class="rol">
+          <p><span>Empleadores</span> <strong>312</strong></p>
+          <progress value="8" max="100">8%</progress>
+          <small>8% del total</small>
+        </div>
+
+        <div class="rol">
+          <p><span>Administradores</span> <strong>118</strong></p>
+          <progress value="3" max="100">3%</progress>
+          <small>3% del total</small>
+        </div>
+
+        <hr>
+
+        <p class="total-usuarios">3.842</p>
+        <p class="etiqueta">usuarios totales en plataforma</p>
+      </article>
+
+    </section>
+
+    <!-- ALERTAS Y ACTIVIDAD -->
+    <section class="fila-inferior">
+
+      <!-- Alertas activas -->
+      <article class="panel panel-alertas">
+        <h2>⚠️ Alertas activas</h2>
+
+        <div class="alerta alerta-peligro">
+          <h3>Empresa sin verificar</h3>
+          <p>LogiFood SpA lleva 5 días sin verificación de documentos.</p>
+          <a href="#">Revisar</a>
+        </div>
+
+        <div class="alerta alerta-advertencia">
+          <h3>Vacante reportada</h3>
+          <p>Postulación #4821 fue reportada por contenido inapropiado.</p>
+          <a href="#">Revisar</a>
+        </div>
+
+        <div class="alerta alerta-info">
+          <h3>Nuevo empleador</h3>
+          <p>3 nuevas empresas registradas esperan revisión.</p>
+          <a href="#">Revisar</a>
+        </div>
+      </article>
+
+      <!-- Actividad reciente -->
+      <article class="panel panel-actividad">
+        <h2>🕒 Actividad reciente</h2>
+
+        <ul class="lista-actividad">
+          <li>
+            <span class="avatar">CD</span>
+            <div>
+              <p><strong>Café del Centro</strong> Publicó una vacante</p>
+              <small>Barista · Part time</small>
+            </div>
+            <time>Hace 5 min</time>
+          </li>
+
+          <li>
+            <span class="avatar">AM</span>
+            <div>
+              <p><strong>Ana Martínez</strong> Confirmó asistencia a turno</p>
+              <small>Turno #TRN-4821</small>
+            </div>
+            <time>Hace 12 min</time>
+          </li>
+
+          <li>
+            <span class="avatar">HP</span>
+            <div>
+              <p><strong>Hotel Palace</strong> Calificó a empleado</p>
+              <small>Juan García · ⭐ 5.0</small>
+            </div>
+            <time>Hace 30 min</time>
+          </li>
+
+          <li>
+            <span class="avatar">CR</span>
+            <div>
+              <p><strong>Carlos Rodríguez</strong> Completó su perfil</p>
+              <small>Empleado verificado</small>
+            </div>
+            <time>Hace 1 hora</time>
+          </li>
+
+          <li>
+            <span class="avatar">S</span>
+            <div>
+              <p><strong>SecuriMax</strong> Asignó trabajador</p>
+              <small>Turno guardia · 20 sep</small>
+            </div>
+            <time>Hace 2 horas</time>
+          </li>
+        </ul>
+        <a href="ver-actividad.html" class="btn btn--contorno">ver toda la actividad</a>
+      </article>
+
+    </section>
+
+  </main>
+</body>
+</html>
