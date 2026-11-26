@@ -1,0 +1,209 @@
+/* ESTILOS GENERALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #080b19 0%,
+        #101a39 40%,
+        #18366e 75%,
+        #24539b 100%
+    );
+
+    color: white;
+}
+
+/* CONTENEDOR */
+.contenedor {
+    width: 100%;
+    padding: 45px 5%;
+}
+
+/* ENCABEZADO */
+.encabezado {
+    margin-bottom: 30px;
+}
+
+.encabezado h2 {
+    color: #f4f5ff;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.encabezado p {
+    color: #849aca;
+    font-size: 14px;
+}
+
+/* PESTAÑAS */
+.pestanas {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.pestana {
+    background: transparent;
+    color: #91a9dc;
+    border: none;
+    border-radius: 7px;
+    padding: 9px 15px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.pestana span {
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.pestana.activa {
+    background: #142b70;
+    color: white;
+}
+
+.pestana:hover {
+    background: #1b3479;
+    color: white;
+}
+
+/* TABLA */
+.tabla-contenedor {
+    width: 100%;
+    background: #eeeeee;
+    border-radius: 13px;
+    overflow-x: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.tabla-postulaciones {
+    width: 100%;
+    min-width: 850px;
+    border-collapse: collapse;
+    color: #263653;
+}
+
+/* ENCABEZADOS DE LA TABLA */
+.tabla-postulaciones thead {
+    background: #e3eaf2;
+}
+
+.tabla-postulaciones th {
+    text-align: left;
+    padding: 17px 20px;
+    color: #344866;
+    font-size: 11px;
+    font-weight: bold;
+    height: 48px;
+}
+
+/* CELDAS */
+.tabla-postulaciones td {
+    padding: 16px 20px;
+    height: 64px;
+    font-size: 13px;
+    color: #536987;
+    vertical-align: middle;
+}
+
+/* NOMBRES DE CARGOS */
+.tabla-postulaciones .cargo {
+    color: #263653;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* ESTADOS GENERALES */
+.estado {
+    display: inline-block;
+    padding: 4px 11px;
+    border-radius: 20px;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+/* ESTADO EN REVISIÓN */
+.revision {
+    background: #f1e9e9;
+    color: #755d62;
+    border: 1px solid #d8c6ca;
+}
+
+/* ESTADO SELECCIONADO */
+.seleccionado {
+    background: #d8edf1;
+    color: #326c7b;
+    border: 1px solid #b6dce4;
+}
+
+/* ESTADO RECHAZADO */
+.rechazado {
+    background: #f0e0ed;
+    color: #85547b;
+    border: 1px solid #dfc4d9;
+}
+
+/* ESTADO EN TURNO */
+.turno {
+    background: #d9edf1;
+    color: #397285;
+    border: 1px solid #b9dce4;
+}
+
+/* BOTÓN VER DETALLE */
+.btn-detalle {
+    background: transparent;
+    color: #263653;
+    border: 1px solid #cbd0d7;
+    border-radius: 6px;
+    padding: 7px 13px;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.btn-detalle:hover {
+    background: #dce5f1;
+}
+
+/* BOTÓN VER TURNO */
+.btn-turno {
+    background: #20a8d0;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-size: 11px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.btn-turno:hover {
+    background: #1689ae;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .contenedor {
+        padding: 25px 15px;
+    }
+
+    .pestanas {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .pestana {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+}
