@@ -1,3 +1,4 @@
+/* ---------- BASE (tu base) ---------- */
 * {
     margin: 0;
     padding: 0;
@@ -5,37 +6,346 @@
 }
 
 body {
+    font-family: "Inter", system-ui, Arial, sans-serif;
     display: grid;
-    grid-template-columns: 300px 1fr; 
-    grid-template-rows: 100px 1fr;  
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 100px 1fr;
     grid-template-areas:
-    "cabecera cabecera"
-    "menu     principal";
+        "cabecera cabecera"
+        "menu     principal";
     min-height: 100vh;
 }
 
-header {
-    grid-area: cabecera;
-    background-color: #070e16;
-    
-}
-h1, h2, h3,h4{
+h1, h2, h3, h4 {
     color: aliceblue;
 }
+
 li {
     color: aliceblue;
 }
+
 p {
     color: #62748e;
 }
+
+/* ---------- HEADER ---------- */
+header {
+    grid-area: cabecera;
+    background-color: #070e16;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding: 0 24px;
+}
+
+header ul {
+    display: flex;
+    gap: 8px;
+    list-style: none;
+}
+
+header li {
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #9bb3a6;
+}
+
+header a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header li.activo {
+    background: #1e3a5f;
+    color: #60a5fa;
+}
+
+/* ---------- ASIDE ---------- */
 aside {
     grid-area: menu;
     background-color: #1b3a4b;
     position: relative;
+    padding: 24px;
 }
+
+aside p {
+    margin-top: 4px;
+    font-size: 14px;
+    color: #4ec3a6;
+}
+
+/* ---------- MAIN ---------- */
 main {
     grid-area: principal;
     background-color: #0d1b2a;
     position: relative;
     padding: 40px;
+}
+
+.volver {
+    display: inline-block;
+    margin-bottom: 24px;
+    color: #9bb3a6;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.volver:hover {
+    color: white;
+}
+
+/* dos columnas: izquierda angosta, derecha ancha */
+.contenido {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.columna-izq,
+.columna-der {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* ---------- TARJETA BLANCA (la usan todas) ---------- */
+.tarjeta {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.tarjeta h3 {
+    font-size: 17px;
+    color: #1e293b;              /* oscuro, porque la tarjeta es blanca */
+    margin-bottom: 16px;
+}
+
+.tarjeta li {
+    color: #1e293b;              /* tu regla global deja los li casi blancos */
+    list-style: none;
+}
+
+/* ---------- PERFIL (columna izquierda, arriba) ---------- */
+.perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    margin-bottom: 14px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #1e3a5f, #4ecdc4);
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.perfil h3 {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.cargo {
+    font-size: 14px;
+    color: #64748b;
+}
+
+.calificacion {
+    margin: 8px 0 12px;
+    color: #1e293b;
+}
+
+.estrellas {
+    color: #fbbf24;
+    letter-spacing: 2px;
+}
+
+.etiqueta-compat {
+    padding: 3px 12px;
+    border: 1px solid #bfdbfe;
+    border-radius: 20px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    font-size: 13px;
+}
+
+.datos-perfil {
+    width: 100%;
+    margin-top: 18px;
+    padding-top: 12px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.datos-perfil li {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.datos-perfil strong {
+    color: #1e293b;
+}
+
+.datos-perfil .verde {
+    color: #10b981;
+}
+
+/* ---------- BARRAS DE COMPATIBILIDAD ---------- */
+.barras li {
+    margin-bottom: 14px;
+}
+
+.barra-titulo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+    font-size: 13px;
+    color: #475569;
+}
+
+.barra {
+    display: block;
+    height: 6px;
+    background: #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.relleno {
+    display: block;
+    height: 100%;
+    background: #10b981;
+    border-radius: 10px;
+}
+
+/* ---------- CARTA DE PRESENTACION ---------- */
+.carta {
+    padding: 20px;
+    border-radius: 12px;
+    background: #f8fafc;
+    color: #64748b;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+/* ---------- EXPERIENCIA LABORAL ---------- */
+.trabajo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+}
+
+.icono-trabajo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: #f1f5f9;
+}
+
+.trabajo h4 {
+    font-size: 15px;
+    color: #1e293b;
+}
+
+.trabajo p {
+    font-size: 13px;
+    color: #64748b;
+}
+
+/* ---------- DISPONIBILIDAD ---------- */
+.dias {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+.dia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 0;
+    border-radius: 10px;
+    background: #d1fae5;
+    color: #047857;
+}
+
+.punto {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #10b981;
+}
+
+.dia.no {
+    background: #f1f5f9;
+    color: #cbd5e1;
+}
+
+.dia.no .punto {
+    background: #cbd5e1;
+}
+
+/* ---------- HABILIDADES ---------- */
+.habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.habilidades span {
+    padding: 8px 16px;
+    border-radius: 10px;
+    background: #f1f5f9;
+    color: #334155;
+    font-size: 15px;
+}
+
+/* ---------- BOTONES DE ABAJO ---------- */
+.acciones-final {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 12px;
+}
+
+.acciones-final button {
+    padding: 16px 24px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-mensaje {
+    background: #1e3a5f;
+    color: white;
+}
+
+.btn-seleccionar {
+    background: #4ecdc4;
+    color: white;
+}
+
+.btn-rechazar {
+    background: transparent;
+    border-color: #475569;
+    color: #64748b;
 }
