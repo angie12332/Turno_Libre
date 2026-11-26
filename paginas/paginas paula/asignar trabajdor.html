@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main class="asignar">
+  <header class="asignar__encabezado">
+    <h1>Asignar Trabajador</h1>
+    <p>Crea y confirma un turno laboral</p>
+  </header>
+
+  <section class="tarjeta">
+  
+    <div class="trabajador">
+      <div class="trabajador__avatar">AM</div>
+      <div class="trabajador__info">
+        <h2>Ana Martínez</h2>
+        <p>Barista · 92% compatibilidad · ⭐ 4.9</p>
+      </div>
+      <span class="insignia">Seleccionada</span>
+    </div>
+
+    <form id="form-asignar">
+      <h3 class="form__titulo">Detalles del turno</h3>
+
+      <div class="form__grid">
+        <div class="campo">
+          <label for="cargo">Cargo asignado</label>
+          <input type="text" id="cargo" name="cargo" value="Barista">
+        </div>
+
+        <div class="campo">
+          <label for="sede">Sede / Local</label>
+          <select id="sede" name="sede">
+            <option value="providencia" selected>Providencia (Principal)</option>
+            <option value="chapinero">Chapinero</option>
+            <option value="kennedy">Kennedy</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="fecha">Fecha del turno</label>
+          <input type="date" id="fecha" name="fecha" value="2025-09-02">
+        </div>
+
+        <div class="campo">
+          <label for="inicio">Hora de inicio</label>
+          <input type="time" id="inicio" name="inicio" value="07:00">
+        </div>
+
+        <div class="campo">
+          <label for="termino">Hora de término</label>
+          <input type="time" id="termino" name="termino" value="12:00">
+        </div>
+
+        <div class="campo">
+          <label for="duracion">Duración total</label>
+          <input type="text" id="duracion" name="duracion" value="5 horas" readonly>
+        </div>
+
+        <div class="campo">
+          <label for="pago">Pago por turno</label>
+          <input type="number" id="pago" name="pago" value="43750" min="0">
+        </div>
+
+        <div class="campo">
+          <label for="direccion">Dirección exacta</label>
+          <input type="text" id="direccion" name="direccion" value="Av. Providencia 1234, Local 8">
+        </div>
+
+        <div class="campo campo--completo">
+          <label for="instrucciones">Instrucciones especiales</label>
+          <textarea id="instrucciones" name="instrucciones" rows="3">Presentarse 10 minutos antes. Ingresar por puerta lateral. Preguntar por encargado Marcelo Soto.</textarea>
+        </div>
+      </div>
+
+      <label class="notificacion">
+        <input type="checkbox" name="notificar" checked>
+        Enviar notificación de turno al trabajador automáticamente
+      </label>
+
+      <div class="acciones">
+        <a class="ver-perfil" href="../Detalle_Candidato.htmll">Volver</a>
+      
+        <a href="turno-asignado.html"btn btn--primario">Confirmar asignación</a>
+      </div>
+    </form>
+  </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main class="gestion">
+  <!-- Encabezado -->
+  <header class="gestion__encabezado">
+    <div>
+      <h1>Gestión de Turnos</h1>
+      <p>Administra los turnos asignados a tu equipo</p>
+    </div>
+
+    <div class="gestion__controles">
+      <div class="vista">
+        <button type="button" class="vista__btn vista__btn--activo">Tabla</button>
+        <button type="button" class="vista__btn">Calendario</button>
+      </div>
+      <a href="asignar-trabajador.html" class="btn btn--primario">+ Nuevo turno</a>
+    </div>
+  </header>
+
+  <!-- Tarjetas de resumen -->
+  <section class="resumen">
+    <article class="resumen__tarjeta">
+      <span class="resumen__icono">📅</span>
+      <strong class="resumen__valor">6</strong>
+      <span class="resumen__texto">Turnos activos</span>
+    </article>
+
+    <article class="resumen__tarjeta">
+      <span class="resumen__icono">✓</span>
+      <span class="resumen__variacion resumen__variacion--baja">↓ 50%</span>
+      <strong class="resumen__valor">3</strong>
+      <span class="resumen__texto">Confirmados</span>
+    </article>
+
+    <article class="resumen__tarjeta">
+      <span class="resumen__icono">🕒</span>
+      <strong class="resumen__valor">3</strong>
+      <span class="resumen__texto">Pendientes</span>
+    </article>
+
+    <article class="resumen__tarjeta">
+      <span class="resumen__icono">$</span>
+      <strong class="resumen__valor">$301.250</strong>
+      <span class="resumen__texto">Costo semanal</span>
+    </article>
+  </section>
+
+  <!-- Tabla de turnos -->
+  <section class="tabla-contenedor">
+    <table class="tabla">
+      <thead>
+        <tr>
+          <th>Empleado</th>
+          <th>Cargo</th>
+          <th>Fecha</th>
+          <th>Horario</th>
+          <th>Sede</th>
+          <th>Pago</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><div class="empleado"><span class="avatar">AM</span> Ana Martínez</div></td>
+          <td>Barista</td>
+          <td>Mar 2 sep</td>
+          <td>07:00–12:00</td>
+          <td>Providencia</td>
+          <td><strong>$43.750</strong></td>
+          <td><span class="estado estado--confirmado">Confirmado</span></td>
+          <td class="acciones-fila">
+            <button type="button" title="Mensaje">💬</button>
+            <button type="button" title="Editar">✏️</button>
+            <button type="button" title="Cancelar">✕</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td><div class="empleado"><span class="avatar">CR</span> Carlos Rodríguez</div></td>
+          <td>Barista</td>
+          <td>Mar 2 sep</td>
+          <td>13:00–18:00</td>
+          <td>Las Condes</td>
+          <td><strong>$43.750</strong></td>
+          <td><span class="estado estado--pendiente">Pendiente</span></td>
+          <td class="acciones-fila">
+            <button type="button" title="Mensaje">💬</button>
+            <button type="button" title="Editar">✏️</button>
+            <button type="button" title="Cancelar">✕</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td><div class="empleado"><span class="avatar">ML</span> María López</div></td>
+          <td>Asist. Cocina</td>
+          <td>Mié 3 sep</td>
+          <td>08:00–16:00</td>
+          <td>Providencia</td>
+          <td><strong>$72.000</strong></td>
+          <td><span class="estado estado--confirmado">Confirmado</span></td>
+          <td class="acciones-fila">
+            <button type="button" title="Mensaje">💬</button>
+            <button type="button" title="Editar">✏️</button>
+            <button type="button" title="Cancelar">✕</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td><div class="empleado"><span class="avatar">DF</span> Diego Fuentes</div></td>
+          <td>Barista</td>
+          <td>Jue 4 sep</td>
+          <td>07:00–12:00</td>
+          <td>Las Condes</td>
+          <td><strong>$43.750</strong></td>
+          <td><span class="estado estado--sin-confirmar">Sin confirmar</span></td>
+          <td class="acciones-fila">
+            <button type="button" title="Mensaje">💬</button>
+            <button type="button" title="Editar">✏️</button>
+            <button type="button" title="Cancelar">✕</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td><div class="empleado"><span class="avatar">VT</span> Valentina Torres</div></td>
+          <td>Barista</td>
+          <td>Vie 5 sep</td>
+          <td>13:00–18:00</td>
+          <td>Providencia</td>
+          <td><strong>$43.750</strong></td>
+          <td><span class="estado estado--completado">Completado</span></td>
+          <td class="acciones-fila">
+            <button type="button" title="Mensaje">💬</button>
+            <button type="button" title="Editar">✏️</button>
+            <button type="button" title="Cancelar">✕</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td><div class="empleado"><span class="avatar">JG</span> Juan García</div></td>
+          <td>Barista</td>
+          <td>Sáb 6 sep</td>
+          <td>07:00–12:00</td>
+          <td>Providencia</td>
+          <td><strong>$43.750</strong></td>
+          <td><span class="estado estado--confirmado">Confirmado</span></td>
+          <td class="acciones-fila">
+            <button type="button" title="Mensaje">💬</button>
+            <button type="button" title="Editar">✏️</button>
+            <button type="button" title="Cancelar">✕</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</main>
+</body>
+</html>
