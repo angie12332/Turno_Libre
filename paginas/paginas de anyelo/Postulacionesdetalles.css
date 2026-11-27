@@ -1,0 +1,379 @@
+/* CONFIGURACIÓN GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: linear-gradient(
+        125deg,
+        #080b19 0%,
+        #101a3b 40%,
+        #173b7c 75%,
+        #24539b 100%
+    );
+
+    color: #263653;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 25px 40px;
+}
+
+/* BARRA SUPERIOR */
+.barra-superior {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.icono-ayuda {
+    color: #9cb6e7;
+    font-size: 17px;
+}
+
+.btn-regresar {
+    background: #1744a8;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 10px 17px;
+    font-size: 12px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-regresar:hover {
+    background: #123681;
+    color: white;
+}
+
+/* DISTRIBUCIÓN */
+.contenido {
+    align-items: flex-start;
+    --bs-gutter-x: 22px;
+    --bs-gutter-y: 22px;
+}
+
+.columna-izquierda,
+.columna-derecha {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* TARJETAS */
+.tarjeta-historial,
+.tarjeta-carta,
+.tarjeta-datos,
+.tarjeta-acciones {
+    background: #f1f1f1;
+    border: none;
+    border-radius: 13px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
+}
+
+/* HISTORIAL */
+.tarjeta-historial {
+    padding: 25px 28px 22px;
+}
+
+/* EMPRESA */
+.encabezado-empresa {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 27px;
+}
+
+.empresa-logo {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    border-radius: 13px;
+    background: #101e54;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.datos-empresa {
+    flex: 1;
+}
+
+.datos-empresa h3 {
+    color: #263653;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.datos-empresa p {
+    color: #7185a5;
+    font-size: 14px;
+    margin: 0;
+}
+
+.datos-empresa i {
+    margin-right: 4px;
+}
+
+/* BOTÓN VER VACANTE */
+.btn-vacante {
+    background: transparent;
+    color: #263653;
+    border: 1px solid #7e8da5;
+    border-radius: 9px;
+    padding: 10px 17px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn-vacante:hover {
+    background: #e0e8f3;
+    color: #263653;
+}
+
+/* TÍTULO HISTORIAL */
+.titulo-historial {
+    color: #263653;
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 19px;
+}
+
+/* LÍNEA DE TIEMPO */
+.linea-tiempo {
+    position: relative;
+}
+
+.paso {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    min-height: 90px;
+}
+
+/* LÍNEAS VERTICALES */
+.paso:not(.ultimo-paso)::before {
+    content: "";
+    position: absolute;
+    left: 18px;
+    top: 38px;
+    height: 53px;
+    width: 2px;
+    background: #c9d5e6;
+}
+
+/* CÍRCULOS */
+.circulo {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    z-index: 1;
+}
+
+/* COMPLETADO */
+.completado .circulo {
+    background: #159d83;
+    color: white;
+}
+
+.completado .informacion-paso h5 {
+    color: #344a6c;
+}
+
+/* EN PROCESO */
+.en-proceso .circulo {
+    background: #e58b32;
+    color: white;
+}
+
+.en-proceso .informacion-paso h5 {
+    color: #966b66;
+}
+
+/* PENDIENTE */
+.pendiente .circulo {
+    background: #dceaff;
+    color: #a7c9f3;
+}
+
+.pendiente .informacion-paso h5 {
+    color: #7395c5;
+}
+
+/* INFORMACIÓN DE LOS PASOS */
+.informacion-paso {
+    padding-top: 3px;
+}
+
+.informacion-paso h5 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.informacion-paso p {
+    color: #8aa3c9;
+    font-size: 13px;
+    margin: 0;
+}
+
+/* CARTA DE PRESENTACIÓN */
+.tarjeta-carta {
+    padding: 26px 30px;
+    min-height: 250px;
+}
+
+.tarjeta-carta h4 {
+    color: #7691bd;
+    font-size: 19px;
+    margin-bottom: 30px;
+}
+
+.texto-carta {
+    color: #8da4c9;
+    font-size: 14px;
+    line-height: 1.8;
+    font-style: italic;
+    margin: 0;
+}
+
+/* DATOS DE POSTULACIÓN */
+.tarjeta-datos {
+    padding: 22px 24px;
+}
+
+.fila-dato {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.fila-dato:last-child {
+    margin-bottom: 0;
+}
+
+.fila-dato span {
+    color: #7185a5;
+    font-size: 14px;
+}
+
+.fila-dato strong {
+    color: #263653;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: right;
+}
+
+/* ACCIONES */
+.tarjeta-acciones {
+    padding: 24px;
+}
+
+.tarjeta-acciones h4 {
+    color: #344866;
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+/* BOTÓN ENVIAR MENSAJE */
+.btn-mensaje {
+    width: 100%;
+    background: #173d96;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 12px;
+}
+
+.btn-mensaje i {
+    margin-right: 8px;
+}
+
+.btn-mensaje:hover {
+    background: #102f79;
+}
+
+/* BOTÓN RETIRAR POSTULACIÓN */
+.btn-retirar {
+    width: 100%;
+    background: transparent;
+    color: #586b88;
+    border: none;
+    padding: 9px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.btn-retirar i {
+    margin-right: 8px;
+}
+
+.btn-retirar:hover {
+    color: #c94d58;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .contenedor {
+        padding: 18px 14px 30px;
+    }
+
+    .barra-superior {
+        margin-bottom: 18px;
+    }
+
+    .encabezado-empresa {
+        flex-wrap: wrap;
+    }
+
+    .datos-empresa h3 {
+        font-size: 17px;
+    }
+
+    .btn-vacante {
+        margin-left: auto;
+    }
+
+    .tarjeta-historial {
+        padding: 20px 17px;
+    }
+
+    .tarjeta-carta {
+        padding: 22px 18px;
+    }
+
+    .tarjeta-datos,
+    .tarjeta-acciones {
+        padding: 20px;
+    }
+}
