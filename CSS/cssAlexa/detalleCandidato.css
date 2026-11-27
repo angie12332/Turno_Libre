@@ -61,18 +61,69 @@ header li.activo {
     color: #60a5fa;
 }
 
-/* ---------- ASIDE ---------- */
 aside {
     grid-area: menu;
     background-color: #1b3a4b;
     position: relative;
-    padding: 24px;
 }
 
-aside p {
+/* parte de arriba: título y línea divisoria */
+.lateral_arriba {
+    padding: 24px;
+    border-bottom: 1px solid #23505d;
+}
+
+.lateral_arriba h1 {
+    font-size: 22px;
+}
+
+.lateral_arriba p {
     margin-top: 4px;
     font-size: 14px;
     color: #4ec3a6;
+}
+
+/* el menú */
+.menu {
+    padding: 24px 16px;
+}
+
+.menu h5 {
+    margin: 0 0 12px 8px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #7f9bb0;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    list-style: none;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 10px;
+    color: #b6c8d4;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.menu a:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+}
+
+/* la página en la que estás */
+.menu a.activo {
+    background: #23505d;
+    color: #4ecdc4;
 }
 
 /* ---------- MAIN ---------- */
