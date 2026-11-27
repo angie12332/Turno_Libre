@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(120deg, #080d20, #101a3b, #173b7c);
+    color: white;
+}
+
+.contenedor {
+    max-width: 1450px;
+    margin: auto;
+    padding: 30px 25px 50px;
+}
+
+/* ENCABEZADO */
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    gap: 20px;
+}
+
+.encabezado h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.encabezado p {
+    color: #819acb;
+    font-size: 15px;
+}
+
+.btn-regresar {
+    display: inline-block;
+    background: #1746a5;
+    color: white;
+    padding: 11px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.btn-regresar:hover {
+    background: #2360ce;
+    color: white;
+}
+
+/* PANEL */
+.panel-calendario {
+    background: #f1f1f1;
+    color: #263858;
+    padding: 25px;
+    border-radius: 13px;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* BARRA CALENDARIO */
+.barra-calendario {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.barra-calendario h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.controles {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.controles button {
+    border: 1px solid #d4dce8;
+    background: white;
+    color: #344967;
+    border-radius: 7px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.controles button:hover {
+    background: #e7effb;
+}
+
+.controles .btn-hoy {
+    padding: 8px 16px;
+    font-size: 13px;
+}
+
+/* CUADRÍCULA */
+.calendario {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    border-top: 1px solid #dce2ec;
+    border-left: 1px solid #dce2ec;
+}
+
+.dia-semana {
+    background: #e8edf5;
+    color: #617694;
+    text-align: center;
+    padding: 13px 5px;
+    font-size: 13px;
+    font-weight: 700;
+    border-right: 1px solid #dce2ec;
+    border-bottom: 1px solid #dce2ec;
+}
+
+.dia {
+    min-height: 125px;
+    padding: 10px;
+    background: #f7f8fa;
+    border-right: 1px solid #dce2ec;
+    border-bottom: 1px solid #dce2ec;
+    overflow: hidden;
+}
+
+.dia.vacio {
+    background: #eceff4;
+}
+
+.numero {
+    display: block;
+    color: #536985;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 9px;
+}
+
+/* EVENTOS */
+.evento {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    border-radius: 7px;
+    margin-bottom: 5px;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.evento strong {
+    font-size: 11px;
+    margin-bottom: 3px;
+}
+
+.evento small {
+    font-size: 10px;
+}
+
+.evento.confirmado {
+    background: #d9f1e9;
+    color: #247b69;
+    border-left: 3px solid #20a487;
+}
+
+.evento.pendiente {
+    background: #f9e8d8;
+    color: #9b693f;
+    border-left: 3px solid #e58b32;
+}
+
+.evento.finalizado {
+    background: #e4e9f1;
+    color: #65738a;
+    border-left: 3px solid #8493aa;
+}
+
+/* LEYENDA */
+.leyenda {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-top: 20px;
+    color: #687b98;
+    font-size: 12px;
+}
+
+.leyenda span {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.punto {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.punto.verde {
+    background: #20a487;
+}
+
+.punto.naranja {
+    background: #e58b32;
+}
+
+.punto.gris {
+    background: #8493aa;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .contenedor {
+        padding: 20px 12px;
+    }
+
+    .encabezado {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .panel-calendario {
+        padding: 12px;
+        overflow-x: auto;
+    }
+
+    .calendario {
+        min-width: 650px;
+    }
+
+    .dia {
+        min-height: 100px;
+        padding: 6px;
+    }
+
+    .evento {
+        padding: 5px;
+    }
+
+    .barra-calendario {
+        min-width: 620px;
+    }
+}
